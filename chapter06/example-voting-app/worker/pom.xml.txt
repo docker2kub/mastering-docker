@@ -1,0 +1,84 @@
+xml version=1.0 encoding=UTF-8
+project xmlns=httpmaven.apache.orgPOM4.0.0 xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+  xsischemaLocation=httpmaven.apache.orgPOM4.0.0 httpmaven.apache.orgxsdmaven-4.0.0.xsd
+  modelVersion4.0.0modelVersion
+
+  groupIdworkergroupId
+  artifactIdworkerartifactId
+  version1.0-SNAPSHOTversion
+
+
+  dependencies
+    dependency
+      groupIdorg.jsongroupId
+      artifactIdjsonartifactId
+      version20140107version
+    dependency
+
+    dependency
+        groupIdredis.clientsgroupId
+        artifactIdjedisartifactId
+        version2.7.2version
+        typejartype
+        scopecompilescope
+    dependency
+
+    dependency
+        groupIdorg.postgresqlgroupId
+        artifactIdpostgresqlartifactId
+        version9.4-1200-jdbc41version
+    dependency
+  dependencies
+
+  build
+    plugins
+      plugin
+        groupIdorg.apache.maven.pluginsgroupId
+        artifactIdmaven-jar-pluginartifactId
+        version2.4version
+        configuration
+          finalNameworkerfinalName
+          archive
+            manifest
+              addClasspathtrueaddClasspath
+              mainClassworker.WorkermainClass
+              classpathPrefixdependency-jarsclasspathPrefix
+            manifest
+          archive
+        configuration
+      plugin
+      plugin
+        groupIdorg.apache.maven.pluginsgroupId
+        artifactIdmaven-compiler-pluginartifactId
+        version3.1version
+        configuration
+          source1.7source
+          target1.7target
+        configuration
+      plugin
+      plugin
+        groupIdorg.apache.maven.pluginsgroupId
+        artifactIdmaven-assembly-pluginartifactId
+        executions
+          execution
+            goals
+              goalattachedgoal
+            goals
+            phasepackagephase
+            configuration
+              finalNameworkerfinalName
+              descriptorRefs
+                descriptorRefjar-with-dependenciesdescriptorRef
+              descriptorRefs
+              archive
+                manifest
+                  mainClassworker.WorkermainClass
+                manifest
+              archive
+            configuration
+          execution
+        executions
+      plugin
+    plugins
+  build
+project
